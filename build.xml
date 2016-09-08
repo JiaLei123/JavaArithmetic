@@ -1,0 +1,44 @@
+<project name="JavaArithmetic" default="compile" basedir=".">
+  <!-- set global properties for this build -->
+  <!--<property file="build.properties"/>-->
+  
+  <property name="JavaArithmetic.name" value="JavaArithmetic"/>
+  <property name="JavaArithmetic.home" value="."/>
+  <property name="JavaArithmetic.src" value="${JavaArithmetic.home}/src"/>
+  <property name="JavaArithmetic.class" value="${JavaArithmetic.home}/class"/>
+  <property name="JavaArithmetic.lib" value="${JavaArithmetic.home}/lib"/>
+  <property name="JavaArithmetic.deploy" value="${JavaArithmetic.home}/deploy"/>
+  
+  <path id="compile.classpath">
+    <pathelement location="${JavaArithmetic.class}"/> 
+  </path>
+  
+  <target name="init">
+    <mkdir dir="${JavaArithmetic.class}"/>
+    <mkdir dir="${JavaArithmetic.deploy}"/>
+    
+    <copy todir="${JavaArithmetic.class}">
+      <fileset dir="${JavaArithmetic.src}">
+        <include name="*.properties"/>
+        <include name="*.xml"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile"  depends="init">
+    <javac srcdir="${JavaArithmetic.src}" destdir="${JavaArithmetic.class}" debug="yes">
+      <classpath refid="compile.classpath"/>
+    </javac>
+    <jar jarfile="${JavaArithmetic.deploy}/${JavaArithmetic.name}.jar" basedir="${JavaArithmetic.class}">
+        <manifest>
+            <attribute name="Main-Class" value="JavaArithmetic.Main"/>
+            <attribute name="Class-Path" value="${JavaArithmetic.lib}"/>
+        </manifest>
+    </jar>
+  </target>
+  
+   <target name="clean">
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${JavaArithmetic.class}"/>
+  </target>
+</project>
