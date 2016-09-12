@@ -1,3 +1,7 @@
+package com.java.jialei.Arithmetic;
+
+import com.java.jialei.Interface.ISorter;
+
 import java.util.Comparator;
 
 public class BubbleISorter implements ISorter {

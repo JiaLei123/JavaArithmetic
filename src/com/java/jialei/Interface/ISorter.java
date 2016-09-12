@@ -1,3 +1,5 @@
+package com.java.jialei.Interface;
+
 import java.util.Comparator;
 
 public interface ISorter {

@@ -31,7 +31,7 @@
     </javac>
     <jar jarfile="${JavaArithmetic.deploy}/${JavaArithmetic.name}.jar" basedir="${JavaArithmetic.class}">
         <manifest>
-            <attribute name="Main-Class" value="JavaArithmetic.Main"/>
+            <attribute name="com.java.jialei.Main-Class" value="JavaArithmetic.com.java.jialei.Main"/>
             <attribute name="Class-Path" value="${JavaArithmetic.lib}"/>
         </manifest>
     </jar>

@@ -1,3 +1,7 @@
+package com.java.jialei.Arithmetic;
+
+import com.java.jialei.Interface.IArithmetic;
+
 /**
  * Created by JiaLei on 2016/9/10.
  */
