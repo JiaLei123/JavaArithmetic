@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class BubbleSorter implements Sorter {
+public class BubbleISorter implements ISorter {
 
     public <T extends Comparable<T>> void sort(T[] list) {
         boolean swapped = true;
@@ -19,7 +19,7 @@ public class BubbleSorter implements Sorter {
 
     public <T> void sort(T[] list, Comparator<T> comp) {
         boolean swapped = true;
-        for(int i = 1; i < list.length; i ++) {
+        for(int i = 1; i < list.length && swapped; i ++) {
             swapped = false;
             for(int j = 0; j < list.length -i; j++) {
                 if(comp.compare(list[j], list[j=1]) > 0) {

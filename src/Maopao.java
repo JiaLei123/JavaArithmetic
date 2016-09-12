@@ -1,7 +1,19 @@
-public class Maopao implements IArithmetic{
-    public void run() {
-        int[] array = new int[]{2, 3, 4,1,8, 5, 7, 0};
-        Sorter sorter = new BubbleSorter();
-        sorter.sort(array);
+/**
+ * The class which will show the  BubbleISorter function
+ */
+public class Maopao extends ArithmeticBase implements IObserver {
+    public void runArithmetic() {
+        Integer[] slist = GenerateIntList(4);
+        //print orignal list
+        printList(slist);
+
+        ISorter sorter = new BubbleISorter();
+        sorter.sort(slist);
+
+        printList(slist);
+    }
+
+    public void Update(){
+        this.runArithmetic();
     }
 }

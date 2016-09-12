@@ -4,8 +4,5 @@ public class Main {
         System.out.println("Hello World!");
         System.out.println("Begin Run");
 
-        Maopao maopao = new Maopao();
-        maopao.run();
-
     }
 }
