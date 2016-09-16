@@ -10,14 +10,14 @@ import com.java.jialei.Interface.IObserver;
  */
 public class Maopao extends ArithmeticBase implements IObserver {
     public void runArithmetic() {
-        Integer[] slist = GenerateIntList(4);
+        Integer[] slist = GenerateIntList(10);
         //print orignal list
-        printList(slist);
+        printList("MaoPao Sort List", slist);
 
         ISorter sorter = new BubbleISorter();
         sorter.sort(slist);
 
-        printList(slist);
+        printList("MaoPao Sort Result", slist);
     }
 
     public void Update(){
