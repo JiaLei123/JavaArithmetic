@@ -5,4 +5,5 @@ package com.java.jialei;
  */
 public class Constants {
 
+    public  static int a;
 }

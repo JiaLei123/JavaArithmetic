@@ -9,8 +9,11 @@ import java.nio.channels.IllegalSelectorException;
 /**
  * Created by JiaLei on 2016/9/16.
  */
-public class SubjectCreater {
-    public static ISubject Create(Operation op) {
+public enum SubjectCreater {
+
+    Instance;
+
+    public ISubject Create(Operation op) {
         ISubject result = null;
         switch (op){
             case sort:
